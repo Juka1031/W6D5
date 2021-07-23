@@ -28,5 +28,9 @@ COLORS = [
     def age
     time_ago_in_words(birthdate)
     end
+
+    def self.color
+        COLORS
+    end
     
 end
