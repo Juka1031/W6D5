@@ -1,0 +1,17 @@
+<h1>Hey, it's me <%= @cat.name %> =^.^=</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>About me</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr> <% [:name, :birthdate, :sex, :color, :description].each do |attribute| %>
+            <td><%= attribute %></td>
+            <td><%= @cat.send attribute %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
